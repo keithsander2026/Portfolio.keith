@@ -1,0 +1,156 @@
+/* Algemene body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #F5F5DC; /* lichtbruine kleur */
+  color: #333;
+}
+
+body {
+  margin: 0;
+  height: 100vh; /* volledige hoogte van het scherm */
+  background: linear-gradient(to right, #f5f5dc 60%, #708090 40%);
+}
+
+/* Header */
+header {
+  background-color: #040720; /* donkerblauw */
+  padding: 20px;
+  text-align: right;
+}
+
+header h1, header p {
+  color: white; /* witte tekst in header */
+  margin: 0;
+}
+
+nav {
+  background-color: #040720; /* donkerblauw */
+  padding: 25px 15px; /* meer ruimte boven/onder (25px) en links/rechts (15px) */
+  text-align: right;
+}
+
+nav a {
+  color: white; /* standaard wit */
+  text-decoration: none;
+  margin: 0 15px;s
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: orange; /* oranje bij hover */
+}
+
+footer {
+  background-color: #040720;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.tekst-links {
+  flex: 1; /* neemt de beschikbare ruimte links */
+}
+
+/*home=page*/
+.foto-rechts img {
+  width: 500px;          /* breedte */
+  height: 550px;         /* hoogte */
+  border-radius: 50%;    /* maakt de foto rond */
+  object-fit: cover;     /* zorgt dat de foto mooi in de cirkel past */
+  border: 4px solid #696969; /* optioneel: rand in donkergrijs */
+}
+
+.home-content { /*home-page*/
+  display: flex;
+  align-items: center;
+  margin-top: 5px; /* dit brengt de body naar beneden */
+  padding: 0 40px;
+  gap: 40px;
+}
+
+/*skills*/
+.skills {
+  width: 60%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.skill { /*over mezelf*/
+  margin-bottom: 20px;
+}
+
+.bar { /*over mezelf*/
+  background-color: #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.fill { /*over mezelf*/
+  background-color: #FFD700 ; /* goud */
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 25px;
+}
+
+.about { /*over mezelf*/
+  width: 90%;          /* breedte van de tekst */
+  margin: 0 auto;      /* automatisch centreren */
+  text-align: left;    /* tekst blijft netjes links uitgelijnd binnen de container */
+}
+
+.contact {/* 1 kleur gegeven aan de contac-pagina*/
+  background-color: #f5f5dc; /* crème */
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/*foto contact*/
+.contact-image {
+  width: 100%;              /* vult hele breedte */
+  height: 250px;            /* rechthoekige hoogte */
+  object-fit: cover;        /* snijdt netjes bij zonder vervormen */
+  margin-bottom: 20px;      /* ruimte tussen foto en tekst */
+}
+
+
+/* Verwijder fade-in van body */
+body {
+  opacity: 1; /* altijd zichtbaar */
+  transition: none;
+}
+
+/* Fade-in alleen voor de inhoud */
+.main-content {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.main-content.page-loaded {
+  opacity: 1;
+}
+
+.main-content.fade-out {
+  opacity: 0;
+}
+
+/* Scroll animatie blijft hetzelfde */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

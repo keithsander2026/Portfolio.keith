@@ -46,9 +46,7 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: relative; /* niet meer fixed */
 }
 
 .tekst-links {

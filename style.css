@@ -154,3 +154,23 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Op kleine schermen (mobiel) */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column; /* tekst en foto onder elkaar */
+    text-align: center;
+  }
+
+  .foto-rechts img {
+    width: 80%;   /* foto kleiner maken */
+    height: auto; /* hoogte automatisch */
+  }
+}
